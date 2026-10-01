@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rusty Ponce | IT Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07111f;--card:#0d1b2d;--card2:#10233a;--blue:#38bdf8;--blue2:#2563eb;--text:#f8fafc;--muted:#9fb0c3;--line:rgba(148,163,184,.16)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(circle at 80% 10%,rgba(37,99,235,.18),transparent 30%),var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.7}
+nav{position:sticky;top:0;z-index:20;background:rgba(7,17,31,.82);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1120px;margin:auto;padding:16px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:Poppins;font-weight:800;font-size:21px}.logo span{color:var(--blue)}
+.nav-links{display:flex;gap:24px}.nav-links a{color:var(--muted);text-decoration:none;font-size:14px}.nav-links a:hover{color:var(--blue)}
+section,.hero{max-width:1120px;margin:auto;padding:90px 24px}
+.hero{min-height:690px;display:grid;grid-template-columns:1.35fr .65fr;align-items:center;gap:50px}
+.badge{display:inline-block;border:1px solid rgba(56,189,248,.3);background:rgba(56,189,248,.08);color:var(--blue);padding:7px 13px;border-radius:999px;font-size:13px;font-weight:600}
+h1{font-family:Poppins;font-size:clamp(48px,7vw,82px);line-height:1.05;margin:20px 0 12px}
+h1 span{color:var(--blue)}
+.hero h2{font-size:24px;margin:0 0 18px;color:#dbeafe}.hero p{color:var(--muted);max-width:650px;font-size:17px}
+.buttons{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap}
+.btn{padding:12px 19px;border-radius:10px;text-decoration:none;font-weight:700;font-size:14px}.primary{background:linear-gradient(135deg,var(--blue2),#0ea5e9);color:#fff}.secondary{border:1px solid var(--line);color:#fff;background:rgba(255,255,255,.03)}
+.profile{height:330px;width:330px;margin:auto;border-radius:35px;background:linear-gradient(145deg,#102b49,#0b1728);border:1px solid rgba(56,189,248,.25);display:flex;align-items:center;justify-content:center;box-shadow:0 30px 80px rgba(0,0,0,.35)}
+.profile-photo{width:100%;height:100%;object-fit:cover;border-radius:35px;display:block}.initials{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,var(--blue2),var(--blue));font-family:Poppins;font-size:58px;font-weight:800;box-shadow:0 0 60px rgba(56,189,248,.2)}
+.section-title{font-family:Poppins;font-size:38px;margin:0 0 10px}.section-sub{color:var(--muted);max-width:700px;margin-bottom:38px}
+.about-grid,.skills-grid,.project-grid,.goals-grid,.strength-grid{display:grid;gap:20px}
+.about-grid{grid-template-columns:1.4fr .6fr}.card{background:linear-gradient(145deg,rgba(16,35,58,.9),rgba(10,24,40,.9));border:1px solid var(--line);border-radius:18px;padding:26px}
+.card p{color:var(--muted)}.info strong{display:block;color:#fff}.info{margin-bottom:16px}
+.skills-grid{grid-template-columns:repeat(2,1fr)}.skill{display:flex;flex-wrap:wrap;gap:9px}.tag{padding:8px 12px;border-radius:9px;background:#0a2942;border:1px solid rgba(56,189,248,.15);color:#cceeff;font-size:13px}
+.project-grid{grid-template-columns:repeat(3,1fr)}.project{min-height:310px;position:relative}.num{font-family:Poppins;color:var(--blue);font-weight:800;font-size:14px}.project h3{font-family:Poppins;font-size:22px}.project ul{padding-left:18px;color:var(--muted)}
+.goals-grid{grid-template-columns:repeat(4,1fr)}.goal strong{display:block;color:#fff;font-size:17px;margin-bottom:7px}
+.strength-grid{grid-template-columns:repeat(4,1fr)}.strength h3{margin:8px 0}.icon{font-size:28px}
+.quote{border-left:3px solid var(--blue);padding:20px 24px;background:rgba(56,189,248,.05);border-radius:0 14px 14px 0;color:#dbeafe;font-size:18px}
+.contact{text-align:center}.contact-card{max-width:760px;margin:auto}.contact-info{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;color:var(--muted)}
+footer{text-align:center;padding:30px 20px;color:#71839a;border-top:1px solid var(--line);font-size:13px}
+@media(max-width:800px){.nav-links{display:none}.hero{grid-template-columns:1fr;text-align:center;min-height:auto;padding-top:70px}.hero p{margin:auto}.buttons{justify-content:center}.profile{width:240px;height:240px}.profile-photo{border-radius:28px}.initials{width:145px;height:145px;font-size:42px}.about-grid,.project-grid,.skills-grid{grid-template-columns:1fr}.goals-grid,.strength-grid{grid-template-columns:repeat(2,1fr)}section,.hero{padding-left:20px;padding-right:20px}}
+@media(max-width:450px){.goals-grid,.strength-grid{grid-template-columns:1fr}.section-title{font-size:30px}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="logo">Rusty<span>.</span></div>
+    <div class="nav-links">
+      <a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#education">Education</a><a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div>
+    <span class="badge">BSIT 31A2 • ASPIRING IT PROFESSIONAL</span>
+    <h1>Hi, I'm <span>Rusty Ponce.</span></h1>
+    <h2>Technology Enthusiast & IT Student</h2>
+    <p>I’m a Bachelor of Science in Information Technology student passionate about technology, programming, databases, networking, and building useful digital solutions.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#projects">View My Projects</a>
+      <a class="btn secondary" href="#contact">Contact Me</a>
+    </div>
+  </div>
+  <div class="profile"><div class="initials">RP</div></div>
+</header>
+
+<section id="about">
+  <h2 class="section-title">About Me</h2>
+  <p class="section-sub">A quick introduction and the values that guide my growth in IT.</p>
+  <div class="about-grid">
+    <div class="card">
+      <p>I’m a BSIT student with an interest in technology and computer-based solutions. I enjoy exploring how systems work and learning how technology can be used to solve real-world problems.</p>
+      <p>Through academic projects and activities, I have gained experience with basic programming, databases, networking, system analysis, and Microsoft Office applications. I believe continuous learning, teamwork, and determination are important in becoming a successful IT professional.</p>
+      <div class="quote">“Every challenge is an opportunity to learn, improve, and become better.”</div>
+    </div>
+    <div class="card">
+      <div class="info"><strong>Course</strong> Bachelor of Science in Information Technology</div>
+      <div class="info"><strong>Section</strong> BSIT 31A2</div>
+      <div class="info"><strong>Focus</strong> Technology & Digital Solutions</div>
+      <div class="info"><strong>Mindset</strong> Learn • Build • Improve</div>
+    </div>
+  </div>
+</section>
+
+<section id="skills">
+  <h2 class="section-title">My Skills</h2>
+  <p class="section-sub">Technical knowledge and personal strengths I continue to develop.</p>
+  <div class="skills-grid">
+    <div class="card"><h3>💻 Technical Skills</h3><div class="skill">
+      <span class="tag">Computer Troubleshooting</span><span class="tag">Basic Programming</span><span class="tag">Database Management</span><span class="tag">SQL</span><span class="tag">System Analysis</span><span class="tag">Basic Networking</span><span class="tag">DHCP</span><span class="tag">Microsoft Word</span><span class="tag">Microsoft Excel</span><span class="tag">PowerPoint</span>
+    </div></div>
+    <div class="card"><h3>🤝 Soft Skills</h3><div class="skill">
+      <span class="tag">Communication</span><span class="tag">Teamwork</span><span class="tag">Problem-Solving</span><span class="tag">Time Management</span><span class="tag">Adaptability</span><span class="tag">Willingness to Learn</span>
+    </div></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  <p class="section-sub">Selected academic work and technical activities.</p>
+  <div class="project-grid">
+    <div class="card project"><div class="num">01 / SYSTEM</div><h3>Enrollment Management System</h3><p>A school-based system designed to make student enrollment and academic record management more organized and efficient.</p><ul><li>Student & Subject Management</li><li>Enrollment & Class Schedule</li><li>Admin/Registrar Dashboard</li><li>Reports</li></ul></div>
+    <div class="card project"><div class="num">02 / NETWORKING</div><h3>Networking Activities</h3><p>Academic activities focused on understanding how computers communicate within a network.</p><ul><li>DHCP</li><li>IP Addressing & Static IP</li><li>Ping Testing</li><li>Remote Desktop Services</li></ul></div>
+    <div class="card project"><div class="num">03 / DATABASE</div><h3>Database Activities</h3><p>Exercises focused on organizing and managing information using database concepts.</p><ul><li>SQL</li><li>Database Management</li><li>Database Events</li><li>Normalization & 3NF</li></ul></div>
+  </div>
+</section>
+
+<section id="education">
+  <h2 class="section-title">Education</h2>
+  <p class="section-sub">My academic background.</p>
+  <div class="card">
+    <h3>🎓 Bachelor of Science in Information Technology</h3><p>College Student • Currently developing knowledge in programming, databases, networking, and system development.</p>
+    <hr style="border:0;border-top:1px solid var(--line);margin:24px 0">
+    <h3>🏫 Bulihan Integrated National High School</h3><p><strong>Senior High School — HUMSS</strong><br>Graduated 2022 • <strong>With Honors</strong></p>
+    <h3>🏫 Bulihan Integrated National High School</h3><p>Junior High School • Graduated 2020</p>
+    <h3>🏫 Bulihan Sites and Services Project Elementary School</h3><p>Graduated 2016</p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">What I Want to Achieve</h2>
+  <p class="section-sub">My vision and goals for the future.</p>
+  <div class="card" style="margin-bottom:20px"><h3>My Vision</h3><p>To become a knowledgeable and reliable IT professional who can use technology to create useful solutions and contribute to organizations and communities.</p></div>
+  <div class="goals-grid">
+    <div class="card goal"><strong>01 • Improve</strong><p>Continue improving my programming and technical skills.</p></div>
+    <div class="card goal"><strong>02 • Learn</strong><p>Explore new technologies and gain practical IT experience.</p></div>
+    <div class="card goal"><strong>03 • Create</strong><p>Develop useful and innovative technology-based projects.</p></div>
+    <div class="card goal"><strong>04 • Grow</strong><p>Build a successful professional career in the IT industry.</p></div>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">My Strengths</h2>
+  <div class="strength-grid">
+    <div class="card strength"><div class="icon">🚀</div><h3>Willing to Learn</h3><p>Open to learning new technologies and improving my abilities.</p></div>
+    <div class="card strength"><div class="icon">🧩</div><h3>Problem Solver</h3><p>I try to understand problems carefully and find practical solutions.</p></div>
+    <div class="card strength"><div class="icon">🤝</div><h3>Team Player</h3><p>I value communication and cooperation when working with others.</p></div>
+    <div class="card strength"><div class="icon">🔄</div><h3>Adaptable</h3><p>I can adjust to different situations and learn from new experiences.</p></div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="contact-card">
+    <h2 class="section-title">Let's Connect</h2>
+    <p class="section-sub" style="margin-left:auto;margin-right:auto">I'm always interested in learning, improving my skills, and exploring opportunities related to technology.</p>
+    <div class="card">
+      <h3>Rusty Ponce</h3><p>BSIT Student • BSIT 31A2</p>
+      <div class="contact-info"><span>📧 ponce.rusty@ncst.edu.ph</span><span>📱 09930171550</span></div>
+    </div>
+  </div>
+</section>
+
+<footer>© 2026 Rusty Ponce • Aspiring IT Professional</footer>
+</body>
+</html>
